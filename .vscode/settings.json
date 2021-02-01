@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "bitset": "cpp",
+        "vector": "cpp",
+        "__functional_base": "cpp",
+        "array": "cpp",
+        "istream": "cpp",
+        "locale": "cpp",
+        "memory": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp",
+        "deque": "cpp",
+        "map": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp"
+    }
+}

@@ -1,0 +1,6 @@
+This is a text file
+Here is the second line
+Here is the third
+And the Forth
+Fifth 
+Sixth.
