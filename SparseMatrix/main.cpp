@@ -20,16 +20,16 @@ public:
             {
                 if (M.at(row).at(col) != 0)
                 {
-                    this->matrix.insert(make_pair(pair<int, int>(row, col), M.at(row).at(col)));
+                    matrix.insert(make_pair(pair<int, int>(row, col), M.at(row).at(col)));
                 }
             }
         }
     }
 
-    double getElement(SparseMatrix M, int row, int col)
+    double getElement(const SparseMatrix& M, int row, int col)
     {
-        auto indexPair = matrix.find(make_pair(row, col));
-        if (indexPair != matrix.end())
+        map<pair<int,int>,double>::const_iterator indexPair = M.matrix.find(make_pair(row, col));
+        if (indexPair != M.matrix.end())
         {
             return (*indexPair).second;
         }
@@ -39,7 +39,7 @@ public:
         }
     }
 
-    double static dot(SparseMatrix &A, SparseMatrix &B)
+    double static dot(const SparseMatrix &A, const SparseMatrix &B)
     {
         double dotProduct;
         for (auto itA = A.matrix.begin(); itA != A.matrix.end(); itA++)
@@ -56,7 +56,7 @@ public:
 
 int main()
 {
-    vector<vector<double>> vectA{{6, 2, 3}, {0, 0, 0}};
+    vector<vector<double>> vectA{{6, 2, 3}, {0, 1, 0}};
     vector<vector<double>> vectB{{1, 0, 1}, {0, 1, 0}};
     SparseMatrix matA = SparseMatrix(vectA);
     SparseMatrix matB = SparseMatrix(vectB);
