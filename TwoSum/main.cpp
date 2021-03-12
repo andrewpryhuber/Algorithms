@@ -34,7 +34,7 @@ vector<int> twoSumHash(vector<int> &nums, int target)
     for(int i = 0; i < nums.size(); i ++)
     {
         int numToFind = nums.at(i) - target;
-        if(searchMap.find(numToFind) != searchMap.end() ){
+        if(searchMap.find(numToFind) != searchMap.end() && searchMap[numToFind] != i){
             returnIndices.push_back(i);
             returnIndices.push_back(searchMap.at(numToFind));
         }

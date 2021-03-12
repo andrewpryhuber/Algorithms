@@ -18,6 +18,8 @@
         "set": "cpp",
         "__config": "cpp",
         "__nullptr": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "iterator": "cpp",
+        "__split_buffer": "cpp"
     }
 }
